@@ -62,6 +62,8 @@ class CollisionBody {
         /// Reference to the world the body belongs to
         PhysicsWorld& mWorld;
 
+        bool mDebugRenderingEnabled;
+
 #ifdef IS_RP3D_PROFILING_ENABLED
 
 		/// Pointer to the profiler
@@ -102,6 +104,9 @@ class CollisionBody {
 
         /// Return true if the body is active
         bool isActive() const;
+
+        void setEnableDebugRendering(bool state);
+        bool isDebugRenderingEnabled(void) const;
 
         /// Return a pointer to the user data attached to this body
         void* getUserData() const;

@@ -55,6 +55,14 @@ CollisionBody::~CollisionBody() {
 
 }
 
+void CollisionBody::setEnableDebugRendering(bool state) {
+    mDebugRenderingEnabled = state;
+}
+
+bool CollisionBody::isDebugRenderingEnabled(void) const {
+    return mDebugRenderingEnabled;
+}
+
 // Create a new collider and add it to the body
 /// This method will return a pointer to a new collider. A collider is
 /// an object with a collision shape that is attached to a body. It is possible to
